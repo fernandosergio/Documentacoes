@@ -1,0 +1,73 @@
+primeiro pra iniciar o projeto 
+node init -y
+
+depois pra criar o servidor
+npm install express
+express é uma biblioteca que baixa a pasta node modules e package-lock
+
+npm install nodemon -D
+nodemon pra dev, pra ele reiniciar o server sozinho
+no script do package.json coloca em script nodemon caminho/server.js
+
+npm run dev
+pra rodar, pra reiniciar digitar rs
+
+estrutura básica pra mandar arquivos
+require("express)()
+.get("/nomedoarquivo", (req,res) => {
+    return res.sendFile(__dirname + "caminho")
+})
+
+const express = require('express')
+const server = express()
+pra salvar numa variavel e usar depois,
+
+server.use(express.static("public"))
+usado pra dizer aonde estão arquivos de configuração, ex: css, no caso o public é a pasta aonde está
+
+template engine
+npm install nunjucks 
+
+const nunjucks = require('nunjucks')
+chama o nunjucks
+
+nunjucks.configure('caminho', { objetos })
+configura o nunjucks, em caminho é da pasta até os htmls e objetos os argumentos ex: express: server, noCache: true. Depois disso pode mudar o sendFile para render e tirar o __dirname + caminho para apenas o arquivo
+
+return res.render("index.html", { lista })
+Agora da pra por objetos nas funções de retorno, no html se declara com {{lista}}
+
+{%for dados in lista%}
+    <h1> Nome: {{dados.lista}}</h1>
+{%endfor%}
+Repetição de estrutura com for no html atraves do backend
+
+array.push(dados)
+pra adicionar dados numa array atraves no backend, primeiro salvar numa variavel, depois fazer if else pra adicionar ou não
+
+Object.keys(variavel).lenght
+Transforma um objeto numa array pra poder medir o tamanho dela pra usar na logica if else, usar:
+const data = req.query
+
+const isEmpty = Object.keys(data).lenght > 0
+
+if(isEmpty) {
+    tanana
+} else {
+    tanana
+}
+
+[% if lista == ""%]
+ Não tem o que buscou
+[%else%]
+ se tiver o que buscou
+[%endif%]
+Faz um verificação no html se o banco de dados existe
+
+
+req.body na função backend da pagina
+.use(express.urlencoded({ extended: true })) : no arquivo do server
+method="POST" na tag form
+fazer .post("rota", função)
+no arquivo das funcionalidades exporta a função e importa
+no html mudar o action para a "rota"

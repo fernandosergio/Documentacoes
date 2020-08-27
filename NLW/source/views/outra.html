@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/main.css">
+</head>
+
+<body>
+    <form action="/save-classes" method="POST">
+        <label for="selec">Selecione</label>
+        <select name="selec" id="selec">
+            <option value="" disabled hidden>Selecione uma opção</option>
+            {%for opc in opcoes%}
+            <option value="{{loop.index}}" {{ "selected" if filters.selec == loop.index}}>{{opc}}</option>
+            {%endfor%}
+        </select>
+        <label for="day">Dia da semana</label>
+        <select name="day" id="day">
+            {%for d in dias%}
+            <option value="{{loop.index0}}" {{"selected" if filters.day == loop.index0}}>{{d}}</option>
+            {%endfor%}
+        </select>
+        <label for="hour">Hora</label>
+        <input type="time" name="hour" id="hour" value="{{filters.hour}}">
+        <button type="submit">Enviar</button>
+    </form>
+    <h1>outra pagina</h1>
+    <a href="/">index</a>
+    <a href="/form">Form</a>
+</body>
+
+</html>

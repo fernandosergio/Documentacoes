@@ -1,0 +1,10 @@
+m = float(input('Digite quantos metros são: '))
+km = m * (10 ** -3)
+hm = m * (10 ** -2)
+dam = m * (10 ** -1)
+dm = m * (10 ** 1)
+cm = m * (10 ** 2)
+mm = m * (10 ** 3)
+
+print(f'{m}m equivalem a \n {km:.3f}km \n {hm:.3f}hm \n {dam:.3f}dam')
+print(f' {dm:.3f}dm \n {cm:.3f}cm \n {mm:.3f}mm')

@@ -1,0 +1,5 @@
+tempF = 78
+
+tempC = (tempF - 32) * 5  / 9
+
+print("A temperatura e de ", Tempc)

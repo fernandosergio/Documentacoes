@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form method="POST" action="/save-classes">
+        Nome:<input type="text" name="name"> <br> Idade
+        <input type="text" name="age"> <br>Cidade
+        <input type="text" name="city"> <br> Hora
+        <input type="text" name="hour"> <br>Dia
+        <select name="day" id="day">
+            {%for d in dias%}
+            <option value="{{loop.index0}}" {{"selected" if filters.dia == loop.index0}}>{{d}}</option>
+            {%endfor%}
+        </select> <br> Opção
+        <select name="selec" id="selec">
+            <option value="" disabled hidden>Selecione uma opção</option>
+            {%for opc in opcoes%}
+            <option value="{{loop.index}}" {{ "selected" if filters.selec == loop.index}}>{{opc}}</option>
+            {%endfor%}
+        </select> <br> Time from
+        <input type="time" name="time_from"> <br> Time to
+        <input type="time" name="time_to">
+        <button type="submit">Enviar</button>
+    </form>
+    <a href="/">Index</a>
+    <a href="/outra">Outra</a>
+</body>
+
+</html>

@@ -1,0 +1,174 @@
+    Tags
+
+    quebra linha ( <br/> )
+
+    espaço em branco  ( &nbsp; )
+
+    <wbr/> indica que a palavra pode ser quebrada ao diminuir o site
+
+    &shy; quando uma palavra é quebrada ao redimensionar a tela, adiciona um hífen automatico.
+
+    &lt; <
+    &gt; >
+    &le; <=
+    &get; >=
+
+    &pound; libra
+    &yean; japones
+    &euro; euro
+
+    &copy; Copyright
+    &reg; Marca registrada
+    &trade; Trade Mark
+
+    &permil; % mil
+    &sum; soma
+    &infin; inifinito
+    &times; multiplicação
+    &plusmn; mais
+    &oplus; mais dentro de uma bola
+    &radic; raiz quadrada
+    &ne; diferente
+
+    &delta; letra grega
+    &Delta; letra grega
+    &Lambda; A sem o traço
+    &omega;
+    &phi
+
+    se colocar alguma desses items abaixo com a letra maiuscula no começo mudará o simbolo.
+    &larr; seta pra esquerda
+    &rarr; pra direita
+    &uarr; pra cima
+    &darr; pra baixo
+    &harr pros dois lados
+
+    &spades; espada (carta)
+    &clubs; zap (carta)
+    &hearts; coração (carta)
+    &diams; ouro (carta)
+    <i>Texto</i> Italico apenas
+    <em>Texto</em>  Italico mas  em enfâse
+    <b>Texto</b>  Negrito
+    <u>Texto</u>  Sublinhado porem obsoleto
+    <s>Texto</s>  Risco porem obsoleto
+    <del>Texto</del>  Risco, Tag correta
+
+    Formatação
+
+
+    <span style="text-decoration: underline;"></span>  Formatação com CSS
+    style=text-decoration underline(Soblinhado) overline(Soblinhado em cima) line-through (Risco no meio) none (faz nada)
+    style= font weight: (Diz a quantidade de Negrito) normal, bold, bolder ou colocar um valor entre 100 e 900
+
+    <h2 align="center;"></h2>  Alinhamento mas obsoleto
+    <h2 style="text-align: left;"></h2> Alinhamento
+    style="text-align: " left, right, justify
+
+    em head <style>
+        p(A tag que deseja formatar){
+          parametros
+        }
+    </style>
+
+    <sup>Texto</sup>  A palavra fica na metade pra cima da linha
+    <sub>Texto</sub>  A palavra fica na metade pra baixo da linha
+    <code>Texto</code>  Tag pra mostrar codigo
+    <pre>Texto</pre>  Todos os espaços e enter vão ser considerados
+
+    Cores
+
+    no body <body style="backgroung-color: red;">
+    style="backgroung-color: cor;"  escolhe a cor do fundo
+    ou
+    em style no head= body { parametros }
+    pesquisar color picker no google pra ver cores
+    melhor função rgb(verm, verd, azul)
+    rgba(r, g, b, a) a = Transparencia entre 0 e 1 no
+
+    hsl(h,s,l) muda a cor por matiz(int), saturação(%) e luminosidade(%)
+    hsla(h, s, l, a)
+
+    imagens
+    <img src="">  Adiciona uma imagem
+    <img src="" width="200"> Mudaa largura pra 200px mas o tamanho continua o mesmo
+    o melhor e diminir no arquivo mesmo
+    <figure> <img src="" alt=""/> </figure> Indica que é uma imagem pro navegador
+    <figcaption></figcaption> Legenda da imagem
+
+    Formatação CSS
+    <link rel="stylesheet" type="text/css" href="Local do arquivo"> Diz aonde tá o texto de estilo do CSS
+    /* Formatação de imagens com legendas*/
+    figure.foto-legenda {
+      position: relative;
+      border: 8px solid white;
+      box-shadow: 1px 1px 4px black;
+    }  Formatação das bordas
+
+    figure.foto-legenda img {
+      width: 100%;
+      height: 100%;
+      }  Formatação da imagem
+
+    figure.foto-legenda figcaption{
+      opacity: 0;
+      position: absolute;
+      top: 0px;
+      background-color: rgba(0, 0, 0, 0.4);
+      color: white;
+      width: 100%;
+      height: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+      transition: opacity 1s;
+    }  Formatação do figcaption
+
+    figure.foto-legenda:hover figcaption {
+      opacity: 1;
+    }  Efeitos do figcaption
+
+    Menus
+    <nav id="id">  Criador de menus, diz o id do estilo a ser aplicado
+      <ol type="Tipos" star="posição de inicio"> ou
+        <ul type="tipo"> Pode ser square, cirle ou disc
+      <li>Menu 1</li>
+      <li>Menu 2</li>
+      </ul>
+      </ol>
+    </nav>
+
+  Links
+  <a href="link" target="_blank"></a> href é o link quando clicar e target abre uma nova aba em vez de redirecionar
+  _self abre na mesma aba
+
+  Menus no CSS
+  nav#menu tag {
+    list-style: none;  Tira o type do ol ou ul
+    text-transform: parametro; Mudo o texto na tag
+    display: inline-block;  faz um quadrado em volta dos itens
+    padding: 0px; aumenta o espaço detro do quadrado
+    margin: 0 px; aumenta o espaço fora do quadrado
+    position: absolute; posição absoluta no site
+    top: 0px;
+    left: 0px;  Diz aonde vc quer o menu
+  }
+
+  Formatação de interfaces
+  margin: 0px 0px 0px 0px; cima direita baixo e esquerda
+  border configura a borda
+  background: url(" ") coloca a imagem no css
+
+  Tabela
+<table> Define uma tabela
+<th> Define um cabeçalho de tabela
+<tr> Define uma linha de tabela
+<td> Define uma célula de tabela
+<caption> Define um título de tabela
+<colgroup> Define um grupo de colunas de tabela
+<col> Define os valores de atributo para uma ou mais colunas em uma tabela
+<thead> Define um cabeçalho de tabela
+<tbody> Define o corpo de uma tabela
+<tfoot> Defines o rodapé (footer) de uma tabela
+
+pra linkar um arquivo js no html
+<script src="localdoarquivo"></script>

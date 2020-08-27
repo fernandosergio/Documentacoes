@@ -1,0 +1,10 @@
+"""Olá."""
+nome = input('Digite o seu nome completo: ').strp()
+espaços = nome.count(' ')
+print(f'O seu nome tem {len(nome)} caracteres.')
+print(f'O seu nome tem {espaços} espaços.')
+print(f'Todas as letras maiusculas: {nome.upper()}.')
+print(f'Todas as letras minusculas: {nome.lower()}.')
+print(f'Tamanho do nome sem espaços {len(nome) - espaços}.')
+primeiro = nome.split()
+print(f'O primeiro nome tem {len(primeiro[0])} letras.')
