@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de idade</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
+    <section>
+        <div>
+            <p>
+                <h2>Qual seu ano de nascimento?</h2>
+                <input type="number" name="idd" id="idd" placeholder="Digite seu ano de nasc."> <br> Sexo:
+
+                <input type="radio" name="sexo" id="masc"><label for="masc">Masculino</label>
+
+                <input type="radio" name="sexo" id="fem" checked><label for="fem">Feminino</label>
+            </p>
+            <p> <input type="button" value="Verificar" onclick="verificar()">
+            </p>
+        </div>
+        <div id="res">
+            Preencha os dados acima para ver seu resultado!
+        </div>
+    </section>
+    <footer>
+        <p>&copy; Fernando Sergio</p>
+    </footer>
+    <script src="javascript.js"></script>
+</body>
+
+</html>
