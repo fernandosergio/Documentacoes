@@ -1,0 +1,49 @@
+indexedDB é um object store, pode armazenar tudo o que é clonavel até arquivos.
+
+Vai ser usado a biblioteca indexedDB Promise.
+
+
+
+db.open(name, version, {upgradeCallback})
+
+open cria ou abre um banco de dados, tem que declarar um nome, versão e, opcionalmente, uma callback funciont para gerenciar os object stores, retorna uma Promise.
+Object stores só podem ser criadas ou destruidas durante a chamada do open. O upgradeCallback só vai ser chamado quando o db vai ser criado ou se a versão é maior que a atual.
+
+
+
+var dbPromise = idb.open('test-db', 1, function(upgradeDb){
+    if (!upgradeDb.objectStoreNames.contains('firstOS')){
+        upgradeDb.createObjectStore('firstOS')
+    }
+})
+
+Se tentar criar uma store já existente dara um erro então deve-se verificar se já existe primeiro
+
+
+
+// Usando keypath
+upgradeDb.createObjectStore('people', { keypath: 'email'})
+upgradeDb.createObjectStore('notes', { autoincrement:true })
+upgradeDb.createObjectStore('logs', { keypath: 'id', autoincrement:true })
+
+
+
+
+var dbPromise = idb.open('test-db', 1, function(upgradeDb){
+    if (!upgradeDb.objectStoreNames.contains('people')){
+       var peopleOS upgradeDb.createObjectStore('people')
+        peopleOS.createIndex('email', 'email', { unique:true })
+    }
+})
+
+Pra criar um index
+
+
+// manipulando dados
+indexedDB suporta CRUD operations: Create, Retrieve, Update, and Delete e tambem usa transactions pra juntar essas operações
+Tabem tem getALL
+
+cursor: extrai valores pelo index ou key, tem que envolver as operações num transaction, isso agrupa as operações para que elas acontecam como uma unidade
+
+transaction ajudam a garantir que o banco de dados esteja sempre em um estado consistente. Tambem são importantes se tiver varias copias do seu aplicativo em execução pois evitam gravações simultanes nos mesmos dados.
+
