@@ -23,4 +23,14 @@ $(document).ready(function() {
             divAposta.innerHTML = 'Selecione um concurso!'
         }
     })
+    var inputs = document.querySelectorAll('input[type="checkbox"]:checked')
+    $('input[type="checkbox"]').click(function() {
+        alert('opa click')
+    })
+    $(document).find('input[type="checkbox"]').each(function() {
+        if ($(this).prop("checked") == "checked") {
+            alert('opa')
+        }
+    })
+
 })
