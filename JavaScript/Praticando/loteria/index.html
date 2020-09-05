@@ -5,13 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verificar números da loteria</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h2>Verificar números da loteria</h2>
+    <section>
+        <h2>Verificar números da loteria</h2>
+        <div class="content">
 
-    Selecione o concurso
-    <select name="selConcurso" id="selConcurso">
+            <p> Selecione o concurso</p>
+            <select name="selConcurso" id="selConcurso">
         <option value="megasena">Mega-sena</option>
         <option value="quina">Quina</option>
         <option value="lotofacil">Lotofácil</option>
@@ -21,35 +24,43 @@
         <option value="diadesorte">Dia de sorte</option>
         <!-- <option value="loteca">Loteca</option>
         <option value="lotogol">Lotogol</option> -->
-    </select> <br> Digite o número do concurso
-    <input type="number" name="numConcurso" id="numConcurso"> <br>Digite os seus números
-    <input type="text" name="txtNumeros" id="txtNumeros">
+    </select>
+            <p> Digite o número do concurso</p>
+            <input type="number" name="numConcurso" id="numConcurso" placeholder="Digite apenas números">
+            <p> Digite os seus números</p>
+            <input type="text" name="txtNumeros" id="txtNumeros" placeholder="Digite os números com 0 antes">
+            <br>
+            <button name="btnVerificar" id="btnVerificar">Verificar</button>
 
-    <button name="btnVerificar" id="btnVerificar">Verificar</button>
-    <fieldset>
-        <legend>Acertos e erros.</legend>
-        <div>
-            <h3>Números acertados</h3>
-            <div id="numAcertados">
+        </div>
 
+        <fieldset>
+            <legend>Resultado</legend>
+
+            <div>
+                <h3>Números acertados</h3>
+
+                <div id="numAcertados">
+                    -
+                </div>
             </div>
-        </div>
-        <div>
-            <h3>Números errados</h3>
-            <div id="numErrados">
 
+            <div>
+                <h3>Números errados</h3>
+                <div id="numErrados">
+                    -
+                </div>
             </div>
-        </div>
-    </fieldset>
+        </fieldset>
 
-    <fieldset>
-        <legend>Resultado</legend>
-        <h3>Total de acertos</h3>
-        <div id="numAcertadosTotal">
+        <fieldset>
+            <legend>Total de acertos</legend>
 
-        </div>
-    </fieldset>
-
+            <div id="numAcertadosTotal">
+                0
+            </div>
+        </fieldset>
+    </section>
 
     <script src="jquery-3.5.1.js"></script>
     <script src="script.js"></script>

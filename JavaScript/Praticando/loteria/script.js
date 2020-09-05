@@ -34,7 +34,7 @@ $(document).ready(function() {
                 }
                 $("#numAcertados").text(acertados);
                 $("#numErrados").text(errados);
-                $("#numAcertadosTotal").text(acertados.length)
+                $("#numAcertadosTotal").text(acertados.length);
             },
             error: function(error) {
                 console.log('Não entrou ' + error)
