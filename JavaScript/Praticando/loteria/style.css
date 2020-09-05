@@ -6,6 +6,8 @@ body {
     background-color: #A6A6A6;
     margin: 0;
     padding: 0;
+    background-color: #8DF2E8;
+    color: white;
 }
 
 section {
@@ -14,7 +16,7 @@ section {
     width: 80%;
     padding: 2rem;
     border-radius: .3rem;
-    background-color: #B3ECF2;
+    background-color: #AB05F2;
 }
 
 h2 {
@@ -27,15 +29,25 @@ h2 {
 }
 
 .content select {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
     width: 14rem;
     font-size: 13pt;
     padding: .2rem;
+    border-radius: .3rem;
+    border: none;
+    background-color: #DCE4F2;
 }
 
 .content input {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
     padding: .3rem;
     width: 13rem;
     font-size: 11pt;
+    border-radius: .3rem;
+    border: none;
+    background-color: #DCE4F2;
 }
 
 
@@ -51,11 +63,29 @@ h2 {
 }
 
 .content button {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
     margin-top: 2rem;
-    width: 6rem;
+    width: 8rem;
     padding: .3rem;
     font-size: 12pt;
     border-radius: .4rem;
+    border: none;
+    background-color: #138AF2;
+    color: white;
+}
+
+.content button:hover {
+    cursor: pointer;
+    background-color: #304cee;
+}
+
+input[type="checkbox"] {
+    width: 30px;
+    height: 30px;
+    appearance: none;
+    border-radius: 50%;
+    text-align: center;
 }
 
 fieldset {
@@ -72,6 +102,10 @@ fieldset {
 
 fieldset div {
     font-weight: 700;
+}
+
+#numAcertadosTotal {
+    font-size: 27pt;
 }
 
 h3 {

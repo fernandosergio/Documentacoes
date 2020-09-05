@@ -11,24 +11,30 @@
 <body>
     <section>
         <h2>Verificar números da loteria</h2>
-        <div class="content">
+        <div class="content" id="content">
 
             <p> Selecione o concurso</p>
             <select name="selConcurso" id="selConcurso">
-        <option value="megasena">Mega-sena</option>
-        <option value="quina">Quina</option>
-        <option value="lotofacil">Lotofácil</option>
-        <option value="lotomania">Lotomania</option>
-        <option value="duplasena">Dupla Sena</option>
-        <option value="timemania">Timemania</option>
-        <option value="diadesorte">Dia de sorte</option>
-        <!-- <option value="loteca">Loteca</option>
-        <option value="lotogol">Lotogol</option> -->
-    </select>
+                <option value="0" label="Seleciona uma opção" selected>0</option>
+                <option value="diadesorte" label="Dia de sorte">31</option>
+                <option value="duplasena" label="Dupla Sena">50</option>
+                <option value="lotofacil" label="Lotofácil">25</option>
+                <option value="lotomania" label="Lotomania">100</option>
+                <option value="megasena" label="Mega-sena">60</option>
+                <option value="quina" label="Quina">80</option>
+                <option value="timemania" label="Timemania">80</option>
+                
+                <!-- <option value="loteca">Loteca</option>
+                <option value="lotogol">Lotogol</option> -->
+            </select>
             <p> Digite o número do concurso</p>
             <input type="number" name="numConcurso" id="numConcurso" placeholder="Digite apenas números">
             <p> Digite os seus números</p>
             <input type="text" name="txtNumeros" id="txtNumeros" placeholder="Digite os números com 0 antes">
+            <div id="numAposta">
+                Selecione qual o concurso desejado!
+                <!-- <input type="checkbox" value="01"> -->
+            </div>
             <br>
             <button name="btnVerificar" id="btnVerificar">Verificar</button>
 
@@ -62,8 +68,9 @@
         </fieldset>
     </section>
 
-    <script src="jquery-3.5.1.js"></script>
-    <script src="script.js"></script>
+    <script src="./javascript/jquery-3.5.1.js"></script>
+    <script src="./javascript/busca_api.js"></script>
+    <script src="./javascript/div_apostados.js"></script>
 </body>
 
 </html>
