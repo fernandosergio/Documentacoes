@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar números da loteria</title>
+</head>
+
+<body>
+    <h2>Verificar números da loteria</h2>
+
+    Selecione o concurso
+    <select name="selConcurso" id="selConcurso">
+        <option value="megasena">Mega-sena</option>
+        <option value="quina">Quina</option>
+        <option value="lotofacil">Lotofácil</option>
+        <option value="lotomania">Lotomania</option>
+        <option value="duplasena">Dupla Sena</option>
+        <option value="timemania">Timemania</option>
+        <option value="diadesorte">Dia de sorte</option>
+        <!-- <option value="loteca">Loteca</option>
+        <option value="lotogol">Lotogol</option> -->
+    </select> <br> Digite o número do concurso
+    <input type="number" name="numConcurso" id="numConcurso"> <br>Digite os seus números
+    <input type="text" name="txtNumeros" id="txtNumeros">
+
+    <button name="btnVerificar" id="btnVerificar">Verificar</button>
+    <fieldset>
+        <legend>Acertos e erros.</legend>
+        <div>
+            <h3>Números acertados</h3>
+            <div id="numAcertados">
+
+            </div>
+        </div>
+        <div>
+            <h3>Números errados</h3>
+            <div id="numErrados">
+
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Resultado</legend>
+        <h3>Total de acertos</h3>
+        <div id="numAcertadosTotal">
+
+        </div>
+    </fieldset>
+
+
+    <script src="jquery-3.5.1.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
