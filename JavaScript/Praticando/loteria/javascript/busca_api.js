@@ -1,4 +1,4 @@
-var numeros = '';
+var numeros = [];
 var acertados = [];
 var errados = [];
 
@@ -13,8 +13,11 @@ $(document).ready(function() {
         var numConcurso = $("#numConcurso").val();
         var token = "5LIZAjgs0EARozO"
 
-        numeros = $("#txtNumeros").val();
-        numeros = numeros.split(' ');
+        var inputs = document.querySelectorAll('input[type="checkbox"]:checked')
+
+        for (let i = 0; i < inputs.length; i++) {
+            numeros[i] = inputs[i].value
+        }
 
         var url = "https://apiloterias.com.br/app/resultado?loteria=" + concurso + "&token=" + token + "&concurso=" + numConcurso;
 
@@ -31,7 +34,8 @@ $(document).ready(function() {
                     } else {
                         errados.push(numeros[i]);
                     }
-                }
+                };
+                $('input[type="checkbox"]:checked').prop('checked', false);
                 $("#numAcertados").text(acertados);
                 $("#numErrados").text(errados);
                 $("#numAcertadosTotal").text(acertados.length);
