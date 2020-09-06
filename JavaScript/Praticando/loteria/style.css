@@ -16,6 +16,7 @@ section {
     width: 80%;
     padding: 2rem;
     border-radius: .3rem;
+    text-align: center;
 }
 
 h2 {
@@ -28,7 +29,6 @@ h2 {
 }
 
 .content select {
-    position: relative;
     box-sizing: border-box;
     font-family: 'Roboto Mono', monospace;
     font-weight: 400;
@@ -37,35 +37,38 @@ h2 {
     padding: .2rem;
     padding-left: .4rem;
     border-radius: .3rem;
-    border: none;
+    border: 1px solid #dddddd;
     background-color: #DCE4F2;
     cursor: pointer;
 }
 
-.content select:hover,
-.content select:focus {
-    outline: none;
-    animation-name: animacao;
-}
-
-.content input {
+#numConcurso {
     font-family: 'Roboto Mono', monospace;
     font-weight: 400;
     padding: .3rem;
     width: 13rem;
+    height: 1.5rem;
     font-size: 11pt;
     border-radius: .3rem;
-    border: none;
+    border: 1px solid gray;
     background-color: #DCE4F2;
+    outline: 0;
 }
 
-@keyframes animacao {
-    from {
-        background-color: black;
-    }
-    to {
-        background-color: blue;
-    }
+.barrinha {
+    position: relative;
+    margin: 0;
+}
+
+.barrinha:focus-within::after {
+    content: "";
+    width: 12rem;
+    height: 3px;
+    position: absolute;
+    background-color: #c531d8;
+    left: calc(100% - 63.3%);
+    border-radius: 1.5px;
+    bottom: 0;
 }
 
 
@@ -84,7 +87,7 @@ h2 {
     outline: none;
 }
 
-.content button {
+#btnVerificar {
     font-family: 'Roboto Mono', monospace;
     font-weight: 400;
     margin-top: 2rem;
@@ -103,10 +106,12 @@ div#numAposta {
 }
 
 input[type="checkbox"] {
+    background-color: white;
     width: 40px;
     height: 40px;
     appearance: none;
     border-radius: 50%;
+    padding-top: .4rem;
     text-align: center;
     font-size: 15pt;
     outline: none;
@@ -127,7 +132,7 @@ input:checked:hover[type="checkbox"] {
     background-color: #3BB358;
 }
 
-.content button:hover {
+#btnVerificar:hover {
     cursor: pointer;
     background-color: #304cee;
 }
