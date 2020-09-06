@@ -155,7 +155,8 @@ fieldset div {
     font-weight: 700;
 }
 
-#numAcertadosTotal {
+#numAcertadosTotal,
+#numAcertadosTotalDupla {
     font-size: 27pt;
 }
 
@@ -167,4 +168,23 @@ h3 {
 h4 {
     font-size: 17pt;
     margin-top: .2rem;
+}
+
+@media(min-width: 1200px) {
+    .content div {
+        display: inline-flex;
+    }
+    .content div div {
+        display: table-column;
+    }
+    div .barrinha {
+        margin-left: 3rem;
+        display: table-column;
+    }
+    div#numAposta {
+        display: block;
+    }
+    .content p {
+        margin-top: 2rem;
+    }
 }
