@@ -1,5 +1,8 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap');
+
+/* Fonte */
+
 body {
     font-family: 'Roboto Mono', monospace;
     font-weight: 400;
@@ -24,11 +27,11 @@ h2 {
     text-align: center;
 }
 
-.content {
+div.content {
     text-align: center;
 }
 
-.content select {
+div.content select {
     box-sizing: border-box;
     font-family: 'Roboto Mono', monospace;
     font-weight: 400;
@@ -42,7 +45,7 @@ h2 {
     cursor: pointer;
 }
 
-#numConcurso {
+input#numConcurso {
     font-family: 'Roboto Mono', monospace;
     font-weight: 400;
     padding: .3rem;
@@ -55,12 +58,15 @@ h2 {
     outline: 0;
 }
 
-.barrinha {
+div.barrinha {
     position: relative;
     margin: 0;
 }
 
-.barrinha:focus-within::after {
+
+/* barrinha no input */
+
+div.barrinha:focus-within::after {
     content: "";
     width: 12rem;
     height: 3px;
@@ -74,20 +80,20 @@ h2 {
 
 /* Tira as setas do input */
 
-.content input[type=number]::-webkit-inner-spin-button {
+div.content input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
 
-.content input[type=number] {
+div.content input[type=number] {
     -moz-appearance: textfield;
     appearance: textfield;
 }
 
-.content input[type=number]:focus {
+div.content input[type=number]:focus {
     outline: none;
 }
 
-#btnVerificar {
+button#btnVerificar {
     font-family: 'Roboto Mono', monospace;
     font-weight: 400;
     margin-top: 2rem;
@@ -104,6 +110,9 @@ h2 {
 div#numAposta {
     margin-top: 2rem;
 }
+
+
+/* estilo dos checkbox */
 
 input[type="checkbox"] {
     background-color: white;
@@ -132,7 +141,7 @@ input:checked:hover[type="checkbox"] {
     background-color: #3BB358;
 }
 
-#btnVerificar:hover {
+button#btnVerificar:hover {
     cursor: pointer;
     background-color: #304cee;
 }
@@ -155,8 +164,8 @@ fieldset div {
     font-weight: 700;
 }
 
-#numAcertadosTotal,
-#numAcertadosTotalDupla {
+div#numAcertadosTotal,
+div#numAcertadosTotalDupla {
     font-size: 27pt;
 }
 
@@ -171,10 +180,10 @@ h4 {
 }
 
 @media(min-width: 1200px) {
-    .content div {
+    div.content div {
         display: inline-flex;
     }
-    .content div div {
+    div.content div div {
         display: table-column;
     }
     div .barrinha {
@@ -184,7 +193,7 @@ h4 {
     div#numAposta {
         display: block;
     }
-    .content p {
+    div.content p {
         margin-top: 2rem;
     }
 }
