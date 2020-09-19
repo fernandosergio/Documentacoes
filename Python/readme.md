@@ -1,1 +1,1 @@
-Aplicações desenvolvidas em python.
+Aplicações desenvolvidas em python durante o aprendizado.
