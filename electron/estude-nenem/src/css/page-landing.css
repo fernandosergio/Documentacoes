@@ -1,0 +1,14 @@
+main.page-home {
+    padding: 1rem;
+    background: #cecece;
+    height: 100vh;
+    text-align: center;
+}
+
+.content-today {
+    margin-top: 10rem;
+}
+
+.content-question {
+    margin-top: 10rem;
+}
